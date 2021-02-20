@@ -5,6 +5,7 @@ app = Flask(__name__)
 app.config.from_pyfile('settings.py')
 # add some comments
 ###### Pages
-## Homepage
+
+## login
 from pages.login.login import login
 app.register_blueprint(login)
