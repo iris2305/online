@@ -6,8 +6,7 @@ app.secret_key = 'a72389dda4d674'
 app.config.from_pyfile('settings.py')
 
 ###### Pages
-
 ## Login
-from Pages.Login.Login import Login
+from online.Pages.Login.Tamplates.login import Login
 app.online(Login)
 
