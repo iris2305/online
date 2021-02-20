@@ -1,17 +1,10 @@
 from flask import Flask
 
-
 ###### App setup
-#app = Flask(__name__)
-#app.config.from_pyfile('settings.py')
-
+app = Flask(__name__)
+app.config.from_pyfile('settings.py')
+# add some comments
 ###### Pages
-## Login
-
-@app.route('/')
-def hello_world():
-    return 'Hello, World!'
-
-@app.route('online/')
-def Login():
-    return render_template('Login.html', foo=42)
+## Homepage
+from pages.login.login import login
+app.register_blueprint(login)
