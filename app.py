@@ -7,6 +7,6 @@ app.config.from_pyfile('settings.py')
 
 ###### Pages
 ## Login
-from online.Pages.Login.Tamplates import Login
-app.online
+@app.route('/')
+render_template('login.html', name=name)
 
