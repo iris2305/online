@@ -8,5 +8,4 @@ login = Blueprint('login', __name__, static_folder='static', static_url_path='/l
 # Routes
 @login.route('/')
 def index():
-
     return render_template('login.html')
