@@ -7,6 +7,6 @@ app.config.from_pyfile('settings.py')
 
 ###### Pages
 ## Login
-from online.Pages.Login.Tamplates.login import Login
+from online.Pages.Login.Tamplates import Login
 app.online(Login)
 
