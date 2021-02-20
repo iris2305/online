@@ -8,6 +8,6 @@ from flask import Flask
 ###### Pages
 ## Login
 
-@app.route('/')
+@app.route('online/')
 def Login():
     return render_template('Login.html', foo=42)
