@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Login</title>
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="/onlineInterviews/Images/favicon.jpg">
+  
+    <!--bootstrap cdn-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!--font awesome Icon cdn-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!--custom css-->
+    <link rel="stylesheet" href="/onlineInterviews/Pages/Login/Static/CSS/LoginPageStyle.css">
+
+</head>
+<script defer src="Login.js"></script>
+<body dir="auto">
+
+        <!--navigation bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container" dir="rtl">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="">כניסה <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="">תנאי שימוש</a>
+                    <a class="nav-item nav-link" href="">הוראות</a>
+                    <a class="nav-item nav-link" href="">משימה</a>
+                    <a class="nav-item nav-link" href="">פתרון</a>
+                    <a class="nav-item nav-link" href="">סרטונים</a>
+                    <a class="nav-item nav-link" href="">משוב</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--end navigation bar-->
+
+    <!--login section-->
+    
+    <section class="login-page-site">
+        <div class="head-text text-center">
+            <h1>Login</h1>
+        </div>
+        <br>
+        </br>
+        <div class="container">
+            <form id="form" method="POST" enctype="multipart/form-data" action=”/todo”>
+`               <div Code="error"></div>
+                <div class="login-form" dir="auto">
+
+                    <div class="textbox">
+                        <h1 >אנא הזינו את קוד הניסוי</h1>
+                        <br>
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <input type="number" placeholder="קוד כניסה" name="Code" value="">
+                    </div>
+                    <br>
+
+                    <div class="btn">
+                        <a href="/onlineInterviews/Pages/TermsOfUse/Tamplates/TermsOfUse.html" >המשך</a>
+                    </div>
+                </div>
+            </form>
+            <script src="/onlineInterviews/Pages/Login/Tamplates/Login.js"></script>
+        </div>
+    </section>
+
+    <!--end login section-->
+
+    <!-- footer -->
+    <footer>
+        <div class="text-center footer">
+            <p>---- OnlineInterviews ---- </p>
+        </div>
+    </footer>
+    <!--end footer-->
+
+</body>
+
+</html>

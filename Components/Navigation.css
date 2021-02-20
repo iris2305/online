@@ -1,0 +1,36 @@
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Global css */
+a{
+    text-decoration: none!important;
+}
+
+/* global css end */
+
+
+/* navbar */
+
+.navbar{
+    z-index: 10;
+    position: sticky;
+    top: 0;
+}
+
+.left-nav{
+    width: 100%;
+}
+
+.nav-link:hover{
+    color: rgb(127, 228, 214)!important;
+    transition-duration: .3s;
+}
+
+.navbar-nav .active{
+    color: #54BF9D!important;
+}
+
+/* end Navbar */
