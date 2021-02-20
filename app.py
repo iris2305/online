@@ -8,5 +8,5 @@ app.config.from_pyfile('settings.py')
 ###### Pages
 ## Login
 @app.route('/')
-render_template('login.html', name=name)
-
+def login(name=None):
+    return render_template('login.html', name=name)
