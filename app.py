@@ -53,3 +53,7 @@ app.register_blueprint(Video)
 ## Page error handlers
 from pages.Error.Error import Error
 app.register_blueprint(Error)
+
+
+if __name__ == '__main__':
+    app.run()
