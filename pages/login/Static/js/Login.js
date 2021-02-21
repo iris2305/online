@@ -20,6 +20,6 @@ const form=document.getElementById('form')
 form.addEventListener('sub')
 const array=['1111', '1122', '1133', '1144', '1155'];
     if (!array.includes('string')){
-            window.location.href = '/onlineInterviews/Pages/Error/Tamplates/Error.html';
+            window.location.href = '../../../Error/Tamplates/Error.html';
     }
 <!--Finish checking-->
