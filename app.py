@@ -1,4 +1,6 @@
 from flask import Flask
+from pages.login.login import login
+
 
 ###### App setup
 app = Flask(__name__)
@@ -6,7 +8,6 @@ app.config.from_pyfile('settings.py')
 # add some comments
 ###### Pages
 ## Login
-from pages.login.login import login
 app.register_blueprint(login)
 
 
