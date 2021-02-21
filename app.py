@@ -9,9 +9,7 @@ app.config.from_pyfile('settings.py')
 from pages.login.login import login
 app.register_blueprint(login)
 
-@app.route('/login')
-def login_page():
-    return 'hello world'
+
 #
 # ## Solution
 # from pages.Solution.Solution import Solution
