@@ -1,38 +1,38 @@
-@import "/onlineInterviews/Components/General.css";
+@import "/onlineinterviews/components/general.css";
 
-/* Survey Page */
+/* survey page */
 
-/* Survey section */
+/* survey section */
 
-.Survey .content{
+.survey .content{
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-.Survey .content h1{
+.survey .content h1{
     font-size: 83px;
     font-weight: 700;
     position: relative;
     display: inline-block;
-    color: #4A4C67;
+    color: #4a4c67;
 }
 
-.Survey .content h1:after{
+.survey .content h1:after{
     content: '';
     position: absolute;
     bottom: -8px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translatex(-50%);
     width:83%;
     height: 7.5px;
-    background-color: #4A4C67;
+    background-color: #4a4c67;
 }
 
-.Survey .content h2 {
+.survey .content h2 {
     font-size: 50px;
     margin-top: 12px;
     font-weight: 700;
-    color: #4A4C67;
+    color: #4a4c67;
 }
 
 .survey-form {
@@ -55,7 +55,7 @@
     width: 26px;
     float: left;
     text-align: center;
-    color: #4A4C67;
+    color: #4a4c67;
 }
 
 .textbox input {
@@ -71,16 +71,16 @@
 
 }
 
-.Survey-content  .content .text-box{
+.survey-content  .content .text-box{
     background-position: center;
     padding-bottom: 60px;
 }
 
-.Survey .content p {
+.survey .content p {
     font-size: 60px;
     margin-top: 12px;
     font-weight: 700;
-    color: #4A4C67;
+    color: #4a4c67;
 }
 
 .button {
@@ -94,9 +94,9 @@
     margin: 12px;
 }
 section {
-    background-image: url(/onlineInterviews/Images/greenbackground.png);
+    background-image: url(/onlineinterviews/images/greenbackground.png);
 
 }
-/* end Survey section */
+/* end survey section */
 
-/* Survey-content section */
+/* survey-content section */
