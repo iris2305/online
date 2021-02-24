@@ -1,45 +1,45 @@
-@import "/onlineInterviews/Components/General.css";
+@import "/onlineInterviews/components/general.css";
 
-/* Video Page */
+/* video page */
 
-/* Video section */
+/* video section */
 
-.Video .content{
+.video .content{
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-.Video .content h1{
+.video .content h1{
     font-size: 83px;
     font-weight: 700;
     position: relative;
     display: inline-block;
-    color: #4A4C67;
+    color: #4a4c67;
 }
 
-.Video .content h1:after{
+.video .content h1:after{
     content: '';
     position: absolute;
     bottom: -8px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translatex(-50%);
     width:83%;
     height: 7.5px;
-    background-color: #4A4C67;
+    background-color: #4a4c67;
 }
 
-.Video .content h2 {
+.video .content h2 {
     font-size: 50px;
     margin-top: 12px;
     font-weight: 700;
-    color: #4A4C67;
+    color: #4a4c67;
 }
-/* end Video section */
+/* end video section */
 
-/* Video-content section */
+/* video-content section */
 
 
-.Video-content  .content{
+.video-content  .content{
     background-position: center;
     border: none;
 }
@@ -56,6 +56,6 @@
     margin: 12px;
 }
 section {
-    background-image: url(/onlineInterviews/Images/greenbackground.png);
+    background-image: url(/onlineinterviews/images/greenbackground.png);
 
 }
