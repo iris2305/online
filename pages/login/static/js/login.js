@@ -3,14 +3,14 @@ console.log("LOGIN js loaded...");
 
 
 <!--check if the code is one of the offered codes-->
-const Code=document.getElementById('Code')
-const form=document.getElementById('form')
-
-form.addEventListener('sub')
-const array=['1111', '1122', '1133', '1144', '1155'];
-    if (!array.includes('string')){
-            window.location.href = '../../../error/Tamplates/error.html';
-    }
+// const Code=document.getElementById('Code')
+// const form=document.getElementById('form')
+//
+// form.addEventListener('sub')
+// const array=['1111', '1122', '1133', '1144', '1155'];
+//     if (!array.includes('string')){
+//             window.location.href = '../../../error/Tamplates/error.html';
+//     }
 <!--Finish checking-->
 var duration = 0;
     var page = 1;
