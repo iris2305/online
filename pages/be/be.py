@@ -5,7 +5,7 @@ import settings
 EVENT_INSERT =  '''
 INSERT INTO events_logs
 (user_code, page_num, duration, last_updated)
-VALUES('iris', 2, 10, now())
+VALUES('{0}', 2, 10, now())
 on conflict on constraint events_logs_un  do update set 
 duration = 20 ,last_updated = now()
 
