@@ -8,19 +8,26 @@ function uuidv4() {
     });
 }
 
+var duration = 0;
+var page = 1;
 
 session = sessionStorage.getItem("user_session");
 if(!session){
     session = uuidv4()
     sessionStorage.setItem("user_session",session)
+}else{
+    if(sessionStorage.getItem("page_"+page)){
+        duration = sessionStorage.getItem("page_"+page);
+    }
 }
 
-var duration = 0;
-    var page = 1;
+
     console.log("Starting sending loop")
 setInterval(function(){
     console.log("Sending data to server")
     duration += 2;
+    sessionStorage.setItem("page_"+page,duration);
+
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function (){
         if(this.readyState == 4 && this.status == 200){
