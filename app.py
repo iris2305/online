@@ -1,6 +1,17 @@
 from flask import Flask
 from pages.login.login import login
+# from pages.be.be import be
+import psycopg2
+import settings
 
+EVENT_INSERT =  '''
+INSERT INTO events_logs
+(user_code, page_num, duration, last_updated)
+VALUES('iris', 2, 10, now())
+on conflict on constraint events_logs_un  do update set 
+duration = 20 ,last_updated = now()
+
+'''
 
 ###### App setup
 app = Flask(__name__)
@@ -8,9 +19,21 @@ app.config.from_pyfile('settings.py')
 # add some comments
 ###### Pages
 ## Login
+
+
 app.register_blueprint(login)
+# Routes
+@app.route('/be')
+def be_index():
+    # connection = psycopg2.connect(user=settings.DB['user'], password=settings.DB['password'],
+    #                               host=settings.DB['host'], post=settings.DB['post'],
+    #                               database=settings.DB['database'])
+    # cursor = connection.cursor()
+    # cursor.execute(EVENT_INSERT)
+    return "helo world!"
 
 
+#app.register_blueprint(be)
 #
 # ## Solution
 # from pages.Solution.Solution import Solution
@@ -56,3 +79,5 @@ app.register_blueprint(login)
 
 if __name__ == '__main__':
     app.run()
+
+#must return for heroku two rows up
