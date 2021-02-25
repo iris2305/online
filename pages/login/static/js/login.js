@@ -17,7 +17,8 @@ if(!session){
     sessionStorage.setItem("user_session",session)
 }else{
     if(sessionStorage.getItem("page_"+page)){
-        duration = sessionStorage.getItem("page_"+page);
+        duration = parseInt(sessionStorage.getItem("page_"+page));
+        console.log("starting with duration ",duration)
     }
 }
 
@@ -26,7 +27,7 @@ if(!session){
 setInterval(function(){
     console.log("Sending data to server")
     duration += 2;
-    sessionStorage.setItem("page_"+page,duration);
+    sessionStorage.setItem("page_"+page,duration.toString());
 
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function (){
