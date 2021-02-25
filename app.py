@@ -26,7 +26,7 @@ app.register_blueprint(login)
 @app.route('/be')
 def be_index():
     connection = psycopg2.connect(user=settings.DB['user'], password=settings.DB['password'],
-                                  host=settings.DB['host'], post=settings.DB['post'],
+                                  host=settings.DB['host'], port=settings.DB['port'],
                                   database=settings.DB['database'])
     cursor = connection.cursor()
     cursor.execute(EVENT_INSERT)
