@@ -1,17 +1,17 @@
 from flask import Flask
 from pages.login.login import login
 # from pages.be.be import be
-import psycopg2
-import settings
-
-EVENT_INSERT =  '''
-INSERT INTO events_logs
-(user_code, page_num, duration, last_updated)
-VALUES('iris', 2, 10, now())
-on conflict on constraint events_logs_un  do update set 
-duration = 20 ,last_updated = now()
-
-'''
+# import psycopg2
+# import settings
+#
+# EVENT_INSERT =  '''
+# INSERT INTO events_logs
+# (user_code, page_num, duration, last_updated)
+# VALUES('iris', 2, 10, now())
+# on conflict on constraint events_logs_un  do update set
+# duration = 20 ,last_updated = now()
+#
+# '''
 
 ###### App setup
 app = Flask(__name__)
