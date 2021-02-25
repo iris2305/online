@@ -6,8 +6,8 @@ import settings
 #
 EVENT_INSERT =  '''
 INSERT INTO events_logs
-(user_code, page_num, duration, last_updated)
-VALUES('{0}', {1}, {2}, now())
+(user_code, page_num, duration,session, last_updated)
+VALUES('{0}', {1}, {2},'{3}', now())
 on conflict on constraint events_logs_un  do update set
 duration = {2} ,last_updated = now()
 
@@ -23,9 +23,9 @@ app.config.from_pyfile('settings.py')
 
 app.register_blueprint(login)
 # Routes
-@app.route('/be/<user>/<page>/<duration>')
-def be_index(user, page, duration):
-    sql = EVENT_INSERT.format(user, page , duration)
+@app.route('/be/<user>/<session>/<page>/<duration>')
+def be_index(user,session, page, duration):
+    sql = EVENT_INSERT.format(user, page , duration, session)
     connection = psycopg2.connect(user=settings.DB['user'], password=settings.DB['password'],
                                   host=settings.DB['host'], port=settings.DB['port'],
                                   database=settings.DB['database'])
