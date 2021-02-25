@@ -20,7 +20,7 @@ const form=document.getElementById('form')
 form.addEventListener('sub')
 const array=['1111', '1122', '1133', '1144', '1155'];
     if (!array.includes('string')){
-            window.location.href = '../../error/Tamplates/error.html';
+            window.location.href = '../../../error/Tamplates/error.html';
     }
 <!--Finish checking-->
 var duration = 0;
