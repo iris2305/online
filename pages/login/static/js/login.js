@@ -1,15 +1,4 @@
-<!--detects if user is on pc-->
-console.log("login js loaded")
-const ua = detect.parse(navigator.userAgent)
-const button = document.querySelector('.btn')
-
-console.log(btn)
-
-    if(ua.device !== null){
-        button.href ="/onlineInterviews/Pages/Error/Tamplates/Error.html"
-    }
-<!--Finish detecting-->
-
+console.log("LOGIN js loaded...");
 //took it from :https://www.youtube.com/watch?v=QukFW1qymSA&ab_channel=iEatWebsites
 
 
@@ -25,7 +14,9 @@ const array=['1111', '1122', '1133', '1144', '1155'];
 <!--Finish checking-->
 var duration = 0;
     var page = 1;
+    console.log("Starting sending loop")
 setInterval(function(){
+    console.log("Sending data to server")
     duration += 2;
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function (){
