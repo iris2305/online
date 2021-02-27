@@ -10,7 +10,7 @@ function uuidv4() {
 
 var duration = 0;
 var page = 1;
-
+var user =sessionStorage.getItem("user_code");
 session = sessionStorage.getItem("user_session");
 if(!session){
     session = uuidv4()
@@ -35,6 +35,6 @@ setInterval(function(){
             console.log("success insert wow")
         }
     }
-    xhttp.open("get","https://finalprojectonlineinterviews.herokuapp.com/be/userlogin/"+session+"/"+page+"/"+duration);
+    xhttp.open("get","https://finalprojectonlineinterviews.herokuapp.com/be/"+user+"/"+session+"/"+page+"/"+duration);
     xhttp.send();
 },2000);

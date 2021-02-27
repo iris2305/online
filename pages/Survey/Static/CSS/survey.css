@@ -30,7 +30,6 @@
 
 .survey .content h2 {
     font-size: 50px;
-    margin-top: 12px;
     font-weight: 700;
     color: #4a4c67;
 }
@@ -42,8 +41,8 @@
     left: 20%;
 }
 
-.textbox {
-    width: 30%;
+.text-box {
+    width: 100%;
     overflow: hidden;
     font-size: 20px;
     padding: 8px 0;
@@ -51,14 +50,14 @@
     border-bottom: 1px solid;
 }
 
-.textbox i {
-    width: 26px;
+.text-box i {
+    width: 80px;
     float: left;
     text-align: center;
     color: #4a4c67;
 }
 
-.textbox input {
+.text-box input {
     border: black;
     outline: black;
     background: none;
