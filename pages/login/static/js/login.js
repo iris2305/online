@@ -35,6 +35,6 @@ setInterval(function(){
             console.log("success insert wow")
         }
     }
-    xhttp.open("get","https://finalprojectonlineinterviews.herokuapp.com/be/iris2/"+session+"/"+page+"/"+duration);
+    xhttp.open("get","https://finalprojectonlineinterviews.herokuapp.com/be/userlogin/"+session+"/"+page+"/"+duration);
     xhttp.send();
 },2000);
