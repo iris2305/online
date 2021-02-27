@@ -1,4 +1,4 @@
-@import "/onlineinterviews/components/general.css";
+@import "/onlineInterviews/components/general.css";
 
 /* error page */
 
@@ -62,6 +62,6 @@
     margin: 12px;
 }
 section {
-    background-image: url(/onlineinterviews/images/greenbackground.png);
+    background-image: url(/onlineInterviews/images/greenbackground.png);
 
 }

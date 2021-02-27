@@ -1,11 +1,11 @@
-@import "/onlineInterviews/Components/General.css";
+@import "/onlineInterviews/components/general.css";
 @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 
 /*Login*/
 
 .login-page-site {
     padding: 175px 5px;
-    background-image: url(/onlineInterviews/Images/greenbackground.png);
+    background-image: url(/onlineInterviews/images/greenbackground.png);
 }
 
 
