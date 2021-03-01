@@ -1,0 +1,61 @@
+@import "/onlineInterviews/components/general.css";
+
+/* video page */
+
+/* video section */
+
+.video .content{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.video .content h1{
+    font-size: 83px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    color: #4a4c67;
+}
+
+.video .content h1:after{
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translatex(-50%);
+    width:83%;
+    height: 7.5px;
+    background-color: #4a4c67;
+}
+
+.video .content h2 {
+    font-size: 50px;
+    margin-top: 12px;
+    font-weight: 700;
+    color: #4a4c67;
+}
+/* end video section */
+
+/* video-content section */
+
+
+.video-content  .content{
+    background-position: center;
+    border: none;
+}
+
+
+.button {
+    width: 100%;
+    background:rgb(197, 243, 235);
+    border: 2px solid;
+    color:black;
+    padding-bottom: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 12px;
+}
+section {
+    background-image: url(/onlineInterviews/images/greenbackground.png);
+
+}
