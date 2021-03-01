@@ -82,6 +82,12 @@
     margin: 5px;
   }
 
+.error-message{
+    text-align: center;
+    color: red;
+    font-size: 17px;
+    display: none;
+}
   /*end login*/
 
 

@@ -47,7 +47,7 @@ def enter_user():
     data = {}
     videos = []
     questions = []
-    for x in 10:
+    for x in range(10):
         video = {}
         video['url'] = "https://ynet.co.il"
         video['id'] = x
