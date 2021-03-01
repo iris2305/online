@@ -35,6 +35,42 @@ setInterval(function(){
             console.log("success insert wow")
         }
     }
+
     xhttp.open("get","https://finalprojectonlineinterviews.herokuapp.com/be/"+user+"/"+session+"/"+page+"/"+duration);
     xhttp.send();
 },2000);
+
+function login(){
+    let value = document.getElementById("user_code_input").target.value.trim();
+    if(value.length === 5){
+        let data = {
+            code: value
+        }
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function (){
+            if(this.readyState == 4 && this.status == 200){
+                let res = JSON.parse(this.responseText);
+            }
+        }
+
+        xhttp.open("post","/be/enter-user");
+        xhttp.setRequestHeader('Content-Type','application/json');
+        xhttp.send(JSON.stringify(data));
+    }
+}
+//
+// let data = {
+//     session: session,
+//     user_code: user_code,
+//     page: page,
+//     duration: duration,
+//     answers:[]
+// };
+// for(let i=0;i<3;i++){
+//     let answer = {
+//         user_code: "1234",
+//         question_num: i,
+//         answer: document.getElementById("input_"+i).target.value
+//     }
+//     data["answers"].push(answer);
+// }

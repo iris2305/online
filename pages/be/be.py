@@ -24,6 +24,7 @@ def be_main():
 # Routes
 @be.route('/<user>/<session>/<page>/<duration>')
 def be_index(user,session, page, duration):
+
     sql = EVENT_INSERT.format(user, page , duration, session)
     connection = psycopg2.connect(user=settings.DB['user'], password=settings.DB['password'],
                                   host=settings.DB['host'], port=settings.DB['port'],
@@ -32,6 +33,30 @@ def be_index(user,session, page, duration):
     cursor.execute(sql)
     connection.commit()
     return "hello world!"
+
+
+@be.route('/enter-user', methods=['POST'])
+def enter_user():
+    data = request.get_json()
+    code = data["code"]
+    # execute sql
+    # check if user exists in data base
+    # get user videos
+    # get user questions
+    # return relevant data if user exists
+    data = {}
+    videos = []
+    questions = []
+    for x in 10:
+        video = {}
+        video['url'] = "https://ynet.co.il"
+        video['id'] = x
+        videos.append(video)
+
+    data['videos'] = videos
+    data['questions'] = questions
+    return jsonify(data)
+
 
 
 @be.route('/be_post', methods=['POST'])
