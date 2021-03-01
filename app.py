@@ -1,6 +1,7 @@
 from flask import Flask
 from pages.login.login import login
 from pages.be.be import be
+from pages.termsofuse.termsofuse import termsofuse
 
 ###### App setup
 app = Flask(__name__)
@@ -12,6 +13,7 @@ app.config.from_pyfile('settings.py')
 
 app.register_blueprint(login)
 app.register_blueprint(be)
+app.register_blueprint(termsofuse)
 
 # Routes
 

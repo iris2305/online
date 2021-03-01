@@ -17,7 +17,7 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!--custom css-->
-    <link rel="stylesheet" href="/onlineInterviews/pages/login/static/css/login.css">
+    <link rel="stylesheet" href="{{ url_for('login.static',filename='css/login.css') }}">
     <script src="{{ url_for('login.static',filename='js/login.js') }}"></script>
 </head>
 
@@ -67,9 +67,12 @@
                     </div>
                     <br>
 
-                    <div class="btn">
-                        <a onclick="login()">המשך</a>
+                    <div id="login-error" class="error-message">קוד שגוי</div>
+
+                    <div class="btn" onclick="login()">
+                        <a >המשך</a>
                     </div>
+
                 </div>
             </form>
 
