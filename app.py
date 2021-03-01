@@ -37,46 +37,38 @@ def be_index(user,session, page, duration):
 
 #app.register_blueprint(be)
 #
-# ## Solution
-# from pages.Solution.Solution import Solution
+
+# ## survey
+# from pages.survey.survey import survey
 #
-# app.register_blueprint(Solution)
-#
-#
-# ## Survey
-# from pages.Survey.Survey import Survey
-#
-# app.register_blueprint(Survey)
+# app.register_blueprint(survey)
 #
 #
-# ## Task
-# from pages.Task.Task import Task
+# ## task
+# from pages.task.task import task
 #
-# app.register_blueprint(Task)
+# app.register_blueprint(task)
 #
 #
-# ## TermsOfUse
-# from pages.TermsOfUse.TermsOfUse import TermsOfUse
+# ## termsofuse
+# from pages.termsofuse.termsofuse import termsofuse
 #
-# app.register_blueprint(TermsOfUse)
+# app.register_blueprint(termsofuse)
 #
-# ## Thanks
-# from pages.Thanks.Thanks import Thanks
+# ## thanks
+# from pages.thanks.thanks import thanks
 #
-# app.register_blueprint(Thanks)
+# app.register_blueprint(thanks)
 #
-# ## Login
-# from pages.login.Login import Login
-# app.register_blueprint(Login)
-#
-# ## Video
-# from pages.Video.Video import Video
-# app.register_blueprint(Video)
+
+# ## video
+# from pages.video.video import video
+# app.register_blueprint(video)
 #
 #
 # ## Page error handlers
-# from pages.Error.Error import Error
-# app.register_blueprint(Error)
+# from pages.error.error import error
+# app.register_blueprint(error)
 #
 
 if __name__ == '__main__':
