@@ -1,5 +1,4 @@
 console.log("LOGIN js loaded...");
-//took it from :https://www.youtube.com/watch?v=QukFW1qymSA&ab_channel=iEatWebsites
 
 function uuidv4() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
