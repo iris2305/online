@@ -28,3 +28,7 @@ setInterval(function(){
     xhttp.open("get","https://finalprojectonlineinterviews.herokuapp.com/be/"+user+"/"+session+"/"+page+"/"+duration);
     xhttp.send();
 },2000);
+
+function clickbutton(){
+    window.location.href = "/video"
+}
