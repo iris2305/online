@@ -39,7 +39,10 @@ def be_index(user,session, page, duration):
 def enter_user():
     data = request.get_json()
     code = data["code"]
-    # execute sql
+    # execute
+    # select sequence_ID
+    # from sequence
+    # where sequence_ID=?
     # check if user exists in data base
     # get user videos
     # get user questions
