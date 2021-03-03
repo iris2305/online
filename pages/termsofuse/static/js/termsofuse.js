@@ -29,7 +29,7 @@ setInterval(function(){
     xhttp.send();
 },2000);
 
-function clickbutton() {
+function buttonclick() {
     window.location.href = "/instructions"
 
 }

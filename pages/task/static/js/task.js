@@ -30,6 +30,6 @@ setInterval(function(){
 },2000);
 
 function clickbutton() {
-    window.location.href = "/task"
+    window.location.href = "/solution"
 
 }

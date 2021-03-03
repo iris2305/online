@@ -39,30 +39,58 @@ def be_index(user,session, page, duration):
 def enter_user():
     data = request.get_json()
     code = data["code"]
-    # execute
-    # select sequence_ID
-    # from sequence
-    # where sequence_ID=?
-    # check if user exists in data base
-    # get user videos
-    # get user questions
-    # return relevant data if user exists
-    data = {}
-    videos = []
+
+
+    query = '''
+        select v1.url ,v2.url ,v3.url  from students s 
+        join "sequence" s2 on s.sequence_id  = s2.sequence_id 
+        join video v1 on v1.video_id  = s2.video1_id 
+        join video v2 on v2.video_id  = s2.video2_id 
+        join video v3 on v3.video_id  = s2.video3_id 
+        where s.studentid  = '{0}'
+    '''
+    sql = query.format(code)
+
+    connection = psycopg2.connect(user=settings.DB['user'], password=settings.DB['password'],
+                                  host=settings.DB['host'], port=settings.DB['port'],
+                                  database=settings.DB['database'])
+    cursor = connection.cursor()
+    cursor.execute(sql)
+    records = cursor.fetchall()
+
+    if len(records) == 0:
+        return jsonify(data)
+
+    record = records[0]
+
+    videos = [record[0], record[1], record[2]]
+
     questions = []
-    for x in range(10):
-        video = {}
-        video['url'] = "https://ynet.co.il"
-        video['id'] = x
-        videos.append(video)
 
-    data['videos'] = videos
-    data['questions'] = questions
+    data = {'videos': videos, 'questions': questions}
+
     return jsonify(data)
-
 
 
 @be.route('/be_post', methods=['POST'])
 def be_post():
     data = request.get_json()
     return jsonify(data)
+
+
+@be.route('/feedback', methods=['POST'])
+def feedback():
+    data = request.get_json()
+    query = '''
+        INSERT INTO public.survay
+        (studentid, video_id, ans1, ans2, ans3, ans4)
+        VALUES('{0}', {1}, {2}, {3}, {4}, 0);
+    '''
+    sql = query.format(data["user_code"], data["video_index"], data["question1"], data["question2"], data["question3"])
+    connection = psycopg2.connect(user=settings.DB['user'], password=settings.DB['password'],
+                                  host=settings.DB['host'], port=settings.DB['port'],
+                                  database=settings.DB['database'])
+    cursor = connection.cursor()
+    cursor.execute(sql)
+    connection.commit()
+    return 'ok'

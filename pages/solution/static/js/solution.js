@@ -13,6 +13,8 @@ if(!session){
 }
 
 
+
+
 console.log("Starting sending loop")
 setInterval(function(){
     console.log("Sending data to server")
@@ -25,10 +27,12 @@ setInterval(function(){
             console.log("success insert wow")
         }
     }
-    xhttp.open("get","https://finalprojectonlineinterviews.herokuapp.com/be/"+user+"/"+session+"/"+page+"/"+duration);
+    xhttp.open("get","/be/"+user+"/"+session+"/"+page+"/"+duration);
     xhttp.send();
 },2000);
 
 function clickbutton(){
-    window.location.href = "/video"
+    let index = window.location.pathname.replace("/solution/","");
+    index = index.substring(0,index.indexOf('/'));
+    window.location.href = "/video/"+index
 }

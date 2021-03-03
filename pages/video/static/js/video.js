@@ -1,4 +1,9 @@
 
+let user_data = localStorage.getItem("user_data");
+if(user_data){
+    user_data = JSON.parse(user_data)
+}
+
 var duration = 0;
 var page = 6;
 var user =sessionStorage.getItem("user_code");
@@ -30,6 +35,18 @@ setInterval(function(){
     xhttp.send();
 },2000);
 
-function buttonclick(){
-    window.location.href = "/survey"
+function clickbutton(){
+    let index = window.location.pathname.replace("/video/","");
+    window.location.href = "/survey/"+index;
 }
+
+document.addEventListener("DOMContentLoaded", function(event) {
+  let video = document.getElementById("video_src");
+  let index = window.location.pathname.replace("/video/","");
+  if(index && user_data){
+    index = parseInt(index);
+    let video_url = user_data["videos"][index]
+    video.src = video_url;
+    video.reload();
+  }
+});
