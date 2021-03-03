@@ -26,10 +26,46 @@ setInterval(function(){
             console.log("success insert wow")
         }
     }
-    xhttp.open("get","https://finalprojectonlineinterviews.herokuapp.com/be/"+user+"/"+session+"/"+page+"/"+duration);
+    xhttp.open("get","/be/"+user+"/"+session+"/"+page+"/"+duration);
     xhttp.send();
 },2000);
 
 function buttonclick(){
-    window.location.href = "/thanks"
+    let index = window.location.pathname.replace("/survey/","");
+    index = parseInt(index);
+    question1 = document.forms.questiongroup1.question1.value;
+    question2 = document.forms.questiongroup2.question2.value;
+    question3 = document.forms.questiongroup3.question3.value;
+    if(question1&&question2&&question3){
+        var xhttp = new XMLHttpRequest();
+
+        xhttp.onreadystatechange = function (){
+            if(this.readyState == 4 && this.status == 200){
+                debugger
+                let user_data = JSON.parse(localStorage.getItem("user_data"));
+                if(user_data["videos"].length -1 === index)
+                    window.location.href = "/thanks"
+                else
+                    window.location.href = "/solution/pre/" +(index +1) ;
+
+                document.getElementById("survey_btn").style.pointerEvents = "all";
+            }
+        }
+        let user_code = localStorage.getItem("user_code");
+        let data = {
+            user_code: user_code,
+            video_index: index,
+            question1: question1,
+            question2: question2,
+            question3: question3
+        }
+        xhttp.open("post","/be/feedback");
+        xhttp.setRequestHeader('Content-Type','application/json');
+        xhttp.send(JSON.stringify(data));
+        xhttp.send();
+
+        document.getElementById("survey_btn").style.pointerEvents = "none";
+    }
+    else{
+    }
 }

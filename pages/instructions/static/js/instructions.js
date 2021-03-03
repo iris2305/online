@@ -25,10 +25,10 @@ setInterval(function(){
             console.log("success insert wow")
         }
     }
-    xhttp.open("get","https://finalprojectonlineinterviews.herokuapp.com/be/"+user+"/"+session+"/"+page+"/"+duration);
+    xhttp.open("get","/be/"+user+"/"+session+"/"+page+"/"+duration);
     xhttp.send();
 },2000);
 
 function clickbutton(){
-    window.location.href = "/task"
+    window.location.href = "/solution/pre/0"
 }

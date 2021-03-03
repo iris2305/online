@@ -50,7 +50,12 @@ function login(){
             if(this.readyState == 4 && this.status == 200){
                 let res = JSON.parse(this.responseText);
                 if(res["videos"].length > 0){ // is ok
+                    localStorage.setItem("user_code",value);
+                    localStorage.setItem("user_data",JSON.stringify(res));
                     window.location.href = "/termsofuse"
+                }else{
+                    var errorDiv = document.getElementById("login-error");
+                    errorDiv.style.display = "block"
                 }
             }
         }
