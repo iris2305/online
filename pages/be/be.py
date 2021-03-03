@@ -40,6 +40,7 @@ def enter_user():
     data = request.get_json()
     code = data["code"]
 
+
     query = '''
         select v1.url ,v2.url ,v3.url  from students s 
         join "sequence" s2 on s.sequence_id  = s2.sequence_id 
@@ -56,7 +57,7 @@ def enter_user():
     cursor = connection.cursor()
     cursor.execute(sql)
     records = cursor.fetchall()
-    data = {}
+
     if len(records) == 0:
         return jsonify(data)
 
