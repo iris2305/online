@@ -5,7 +5,6 @@
 /* video section */
 
 .thevideo video{
-    pointer-events: none;
     width: 100%;
 }
 

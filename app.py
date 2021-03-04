@@ -65,6 +65,6 @@ app.register_blueprint(termsofuse)
 #
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=3030)
 
 #must return for heroku two rows up

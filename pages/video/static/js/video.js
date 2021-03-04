@@ -43,9 +43,41 @@ function clickbutton(){
     }
 }
 
+var videoplayer;
+
 document.addEventListener("DOMContentLoaded", function(event) {
   let video = document.getElementById("video_src");
   let index = window.location.pathname.replace("/video/","");
+
+  videoplayer = video;
+
+    videoplayer.onloadstart = ()=>{
+
+        videoplayer.addEventListener('timeupdate', function() {
+          if (!videoplayer.seeking) {
+                supposedCurrentTime = video.currentTime;
+          }
+        });
+        // prevent user from seeking
+        videoplayer.addEventListener('seeking', function() {
+          // guard agains infinite recursion:
+          // user seeks, seeking is fired, currentTime is modified, seeking is fired, current time is modified, ....
+          var delta = videoplayer.currentTime - supposedCurrentTime;
+          if (Math.abs(delta) > 0.01) {
+            console.log("Seeking is disabled");
+            videoplayer.currentTime = supposedCurrentTime;
+          }
+        });
+        // delete the following event handler if rewind is not required
+        videoplayer.addEventListener('ended', function() {
+          // reset state in order to allow for rewind
+            supposedCurrentTime = 0;
+        });
+
+        videoplayer.onended = ()=>{
+            document.getElementById("next_btn").classList.remove('disabled');
+        }
+    }
   if(index && user_data){
     index = parseInt(index);
     let video_url = user_data["videos"][index]
@@ -55,15 +87,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 });
 
-function startvideo(){
-    let video = document.getElementById("video_src");
-    if(video.paused){
-        video.play();
-        video.onended = ()=> {
-            console.log("ended");
-            document.getElementById("next_btn").classList.remove('disabled');
-        }
-    }else{
-        video.pause();
-    }
-}
+var supposedCurrentTime = 0;
