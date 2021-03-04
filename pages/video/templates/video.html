@@ -10,7 +10,7 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfxpqpzzvqgk6tah5pvlgofqnhsod2xbe+qkpxcaflneevoeh3sl0sibvcoqvnn" crossorigin="anonymous">
 
     <!-- custom css -->
-    <link rel="stylesheet" href="/onlineInterviews/pages/video/static/css/video.css">
+    <link rel="stylesheet" href="{{ url_for('video.static',filename='css/video.css') }}">
     <script src="{{ url_for('video.static',filename='js/video.js') }}"></script></head>
 </head>
 <body dir="auto">
@@ -52,14 +52,14 @@
         <section class="video-content">
             <div class="container">
                 <div class="content text-center">
-                    <div class="thevideo">
-                        <video width="700" height="550"  id="video_src"  controls src="">
+                    <div class="thevideo" onclick="startvideo()">
+                        <video width="700" height="550" controls id="video_src" src="">
                         </video>
-                        <div class="button" onclick="clickbutton()">
+                    </div>
+
+                        <div class="button disabled" id="next_btn" onclick="clickbutton()">
                             <a>המשך למשוב</a>
                         </div>
-
-                    </div>
 
                 </div>
             </div>

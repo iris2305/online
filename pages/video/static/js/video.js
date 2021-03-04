@@ -31,13 +31,16 @@ setInterval(function(){
             console.log("success insert wow")
         }
     }
-    xhttp.open("get","https://finalprojectonlineinterviews.herokuapp.com/be/"+user+"/"+session+"/"+page+"/"+duration);
+    xhttp.open("get","/be/"+user+"/"+session+"/"+page+"/"+duration);
     xhttp.send();
 },2000);
 
 function clickbutton(){
-    let index = window.location.pathname.replace("/video/","");
-    window.location.href = "/survey/"+index;
+    let video = document.getElementById("video_src");
+    if(video.ended){
+        let index = window.location.pathname.replace("/video/","");
+        window.location.href = "/survey/"+index;
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -49,4 +52,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
     video.src = video_url;
     video.reload();
   }
+
 });
+
+function startvideo(){
+    let video = document.getElementById("video_src");
+    if(video.paused){
+        video.play();
+        video.onended = ()=> {
+            console.log("ended");
+            document.getElementById("next_btn").classList.remove('disabled');
+        }
+    }else{
+        video.pause();
+    }
+}
