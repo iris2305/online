@@ -11,7 +11,7 @@ from pages.thanks.thanks import thanks
 
 
 ###### App setup
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 app.config.from_pyfile('settings.py')
 
 app.register_blueprint(instructions)

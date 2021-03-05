@@ -1,8 +1,12 @@
-@import "/onlineInterviews/components/general.css";
+/*@import "/onlineInterviews/components/general.css";*/
 
 /* video page */
 
 /* video section */
+
+.thevideo video{
+    width: 100%;
+}
 
 .video .content{
     padding-top: 30px;
@@ -58,4 +62,10 @@
 section {
     background-image: url(/onlineInterviews/images/greenbackground.png);
 
+}
+
+
+.button.disabled{
+    pointer-events: none;
+    opacity: 0.5;
 }
