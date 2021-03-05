@@ -1,5 +1,5 @@
 var duration = 0;
-var page = 5;
+var page = 4;
 var user =sessionStorage.getItem("user_code");
 session = sessionStorage.getItem("user_session");
 if(!session){

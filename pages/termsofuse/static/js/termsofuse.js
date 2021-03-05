@@ -1,5 +1,5 @@
 var duration = 0;
-var page = 2;
+var page = 3;
 var user =sessionStorage.getItem("user_code");
 session = sessionStorage.getItem("user_session");
 if(!session){
@@ -30,6 +30,6 @@ setInterval(function(){
 },2000);
 
 function buttonclick() {
-    window.location.href = "/instructions"
+    window.location.href = "/solution/pre/0"
 
 }

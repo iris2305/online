@@ -1,6 +1,6 @@
 
 var duration = 0;
-var page = 7;
+var page = 5;
 var user =sessionStorage.getItem("user_code");
 session = sessionStorage.getItem("user_session");
 if(!session){
@@ -33,20 +33,21 @@ setInterval(function(){
 function buttonclick(){
     let index = window.location.pathname.replace("/survey/","");
     index = parseInt(index);
+    // take input of user into variable
     question1 = document.forms.questiongroup1.question1.value;
     question2 = document.forms.questiongroup2.question2.value;
     question3 = document.forms.questiongroup3.question3.value;
-    if(question1&&question2&&question3){
+    if(question1&&question2&&question3){ //check that user answered all questions
         var xhttp = new XMLHttpRequest();
 
         xhttp.onreadystatechange = function (){
             if(this.readyState == 4 && this.status == 200){
                 debugger
                 let user_data = JSON.parse(localStorage.getItem("user_data"));
-                if(user_data["videos"].length -1 === index)
+                if(user_data["videos"].length -1 == index)  //if u find this is the last video go to end
                     window.location.href = "/thanks"
                 else
-                    window.location.href = "/solution/pre/" +(index +1) ;
+                    window.location.href = "/solution/pre/" +(index +1) ; //if not- go to next task
 
                 document.getElementById("survey_btn").style.pointerEvents = "all";
             }
@@ -59,12 +60,14 @@ function buttonclick(){
             question2: question2,
             question3: question3
         }
+
+        //take input into database
         xhttp.open("post","/be/feedback");
         xhttp.setRequestHeader('Content-Type','application/json');
         xhttp.send(JSON.stringify(data));
         xhttp.send();
 
-        document.getElementById("survey_btn").style.pointerEvents = "none";
+        document.getElementById("survey_btn").style.pointerEvents = "none"; //display button
     }
     else{
     }
