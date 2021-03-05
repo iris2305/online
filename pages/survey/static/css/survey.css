@@ -93,7 +93,7 @@
     margin: 12px;
 }
 section {
-    background-image: url(/onlineInterviews/images/greenbackground.png);
+    background-image: url(/static/images/greenbackground.png)
 
 }
 /* end survey section */
