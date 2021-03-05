@@ -1,15 +1,15 @@
 @import "/onlineInterviews/components/general.css";
 
-/* task page */
+/* demo page */
 
-/* task section */
+/* demo section */
 
-.task .content{
+.demo .content{
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-.task .content h1{
+.demo .content h1{
     font-size: 83px;
     font-weight: 700;
     position: relative;
@@ -17,7 +17,7 @@
     color: #4a4c67;
 }
 
-.task .content h1:after{
+.demo .content h1:after{
     content: '';
     position: absolute;
     bottom: -8px;
@@ -28,23 +28,23 @@
     background-color: #4a4c67;
 }
 
-.task .content h2 {
+.demo .content h2 {
     font-size: 50px;
     margin-top: 12px;
     font-weight: 700;
     color: #4a4c67;
 }
-/* end task section */
+/* end demo section */
 
-/* task-content section */
+/* demo-content section */
 
 
-.task-content  .content .text-box{
+.demo-content  .content .text-box{
     background-position: center;
     padding-bottom: 60px;
 }
 
-.task .content p {
+.demo .content p {
     font-size: 60px;
     margin-top: 12px;
     font-weight: 700;

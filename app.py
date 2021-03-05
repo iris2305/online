@@ -10,6 +10,7 @@ from pages.survey.survey import survey
 from pages.demo.task import task
 from pages.video.video import video
 from pages.thanks.thanks import thanks
+from pages.demo.demo import demo
 
 
 ###### App setup
@@ -27,8 +28,8 @@ app.register_blueprint(task)
 app.register_blueprint(thanks)
 app.register_blueprint(video)
 app.register_blueprint(be)
+app.register_blueprint(demo)
 app.register_blueprint(termsofuse)
-
 
 #start app in heroku
 
