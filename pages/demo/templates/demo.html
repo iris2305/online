@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <title>demo</title>
+    <link rel="icon"  type="image/png"  href="/onlineInterviews/images/favicon.jpg">
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- font awesome icon cdn -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfxpqpzzvqgk6tah5pvlgofqnhsod2xbe+qkpxcaflneevoeh3sl0sibvcoqvnn" crossorigin="anonymous">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="{{ url_for('demo.static',filename='css/demo.css') }}">
+    <script src="{{ url_for('demo.static',filename='js/demo.js') }}"></script></head>
+</head>
+<body dir="auto">
+
+<!--navigation bar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container" dir="rtl">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarnavaltmarkup"
+                aria-controls="navbarnavaltmarkup" aria-expanded="false" aria-label="toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarnavaltmarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="">כניסה</a>
+                <a class="nav-item nav-link" href="">הוראות</a>
+                <a class="nav-item nav-link" href="">תנאי שימוש</a>
+                <a class="nav-item nav-link" href="">חידה ופתרון</a>
+                <a class="nav-item nav-link" href="">סרטונים</a>
+                <a class="nav-item nav-link" href="">משוב</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!--end navigation bar-->
+
+0        <section class="demo">
+    <div class="container">
+        <div class="content text-center">
+            <h1>שאלון דמוגרפי</h1>
+        </div>
+    </div>
+</section>
+
+<!-- demo-content -->
+
+<section class="demo-content" dir="ltr">
+    <div class="container">
+        <div class="content text-center">
+            <div class="text-box">
+                <form name="q1">
+                    <label for="q1" dir="rtl">1<b>. מה הגיל שלך? </b></label>
+                    <br>
+                    <input dir="ltr" type="text" id="question1" name="question1">
+                </form>
+                <form name="q2">
+                    <label for="q2" dir="rtl"><b>2. כמה שעות ביום ממוצע אתה משתמש במחשב (לפנאי)?</b></label>
+                    <br>
+                    <input dir="ltr" type="text" id="question2" name="question2">
+                </form>
+                <p>	<b>3. לאיזה מגדר אתה משתייך?</b></p>
+                <form name="q3">
+                    <input type="radio" name="question3" value="נקבה">
+                    <label>נקבה</label>
+
+
+                    <input type="radio" name="question3" value="זכר">זכר
+
+
+                    <input type="radio" name="question3" value="אחר">אחר
+
+                </form>
+                <form name="q4">
+                    <label for="q4" dir="rtl"> <b>4. האם אתה בחלל / מרחב סגור או פתוח? על סולם של 1 עד 7, דרג את הסביבה שבה אתה נמצא (כאשר 1 מייצג "חלל סגור" ו-7 מייצג "מרחב פתוח")</b>  </label>
+                    <br>
+                    <input type="radio" name="question4" value="7">
+                    <label>7</label>
+
+                    <input type="radio" name="question4" value="6">6
+
+
+                    <input type="radio" name="question4" value="5">5
+
+
+                    <input type="radio" name="question4" value="4">4
+
+
+                    <input type="radio" name="question4" value="3">3
+
+
+                    <input type="radio" name="question4" value="2">2
+
+
+                    <input type="radio" name="question4" value="1">1
+                    <br>
+                </form>
+
+                <form name="q5">
+                    <label for="q5" dir="rtl"> <b> 5. אם אתה בחלל / מרחב פרטי או ציבורי?
+                        על סולם של 1 עד 7, דרג את הסביבה שבה אתה נמצא (כאשר 1 מייצג "חלל פרטי" ו-7 מייצג "מרחב ציבורי")</b>
+                    </label>
+                    <br>
+                    <input type="radio" name="question5" value="7">
+                    <label>7</label>
+
+
+                    <input type="radio" name="question5" value="6">6
+
+
+                    <input type="radio" name="question5" value="5">5
+
+
+                    <input type="radio" name="question5" value="4">4
+
+
+                    <input type="radio" name="question5" value="3">3
+
+
+                    <input type="radio" name="question5" value="2">2
+
+
+                    <input type="radio" name="question5" value="1">1
+                    <br>
+                </form>
+                <form name="q6">
+                    <label for="q6" dir="rtl">  <b> 6. האם אתה בחלל / מרחב גדול או קטן?
+                        על סולם מ-1 עד 7, דרג את גודל הסביבה שבה אתה נמצא (כאשר 1 מייצג "קטן ביותר" ו-7 מייצג "גדול ביותר").</b>
+                    </label>
+                    <br>
+                    <input type="radio" name="question6" value="7">
+                    <label>7</label>
+
+
+                    <input type="radio" name="question6" value="6">6
+
+
+                    <input type="radio" name="question6" value="5">5
+
+
+                    <input type="radio" name="question6" value="4">4
+
+
+                    <input type="radio" name="question6" value="3">3
+
+
+                    <input type="radio" name="question6" value="2">2
+
+
+                    <input type="radio" name="question6" value="1">1
+                    <br>
+                </form>
+
+                <form name="q7">
+                    <label for="q7" dir="rtl"><b>7. על סולם מ-1 עד 7, דרג את מידת הרעש שסביבך (כאשר 1 מייצג "לא רועש בכלל" ו-7 מייצג "רועש ביותר")</b>
+                    </label>
+                    <br>
+                    <input type="radio" name="question7" value="7">
+                    <label>7</label>
+
+
+                    <input type="radio" name="question7" value="6">6
+
+
+                    <input type="radio" name="question7" value="5">5
+
+
+                    <input type="radio" name="question7" value="4">4
+
+
+                    <input type="radio" name="question7" value="3">3
+
+
+                    <input type="radio" name="question7" value="2">2
+
+
+                    <input type="radio" name="question7" value="1">1
+                    <br>
+                </form>
+
+                <form name="q8">
+                    <label for="q8" dir="rtl"><b>8. על סולם מ-1 עד 7, דרג את מידת החושך שסביבך (כאשר 1 מייצג "לא חשוך בכלל" ו-7 מייצג "חשוך ביותר").</b>
+                    </label>
+                    <br>
+                    <input type="radio" name="question8" value="7">
+                    <label>7</label>
+
+
+                    <input type="radio" name="question8" value="6">6
+
+
+                    <input type="radio" name="question8" value="5">5
+
+
+                    <input type="radio" name="question8" value="4">4
+
+
+                    <input type="radio" name="question8" value="3">3
+
+
+                    <input type="radio" name="question8" value="2">2
+
+
+                    <input type="radio" name="question8" value="1">1
+                    <br>
+                </form>
+
+                <form name="q9">
+                    <label for="q9" dir="rtl"><b>9. על סולם מ-1 עד 7, דרג את מידת צפיפות האנשים שסביבך (כאשר 1 מייצג "לא צפוף בכלל" ו-7 מייצג "צפוף ביותר").</b>
+                    </label>
+                    <br>
+                    <input type="radio" name="question9" value="7">
+                    <label>7</label>
+
+
+                    <input type="radio" name="question9" value="6">6
+
+
+                    <input type="radio" name="question9" value="5">5
+
+
+                    <input type="radio" name="question9" value="4">4
+
+
+                    <input type="radio" name="question9" value="3">3
+
+
+                    <input type="radio" name="question9" value="2">2
+
+
+                    <input type="radio" name="question9" value="1">1
+                    <br>
+                </form>
+
+                <div class="button" onclick="buttonclick()" id="demo_btn">
+                    <a>סיום</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+</section>
+<!-- footer -->
+
+<footer>
+    <div class="text-center footer">
+        <p>---- onlineInterviews ---- </p>
+    </div>
+</footer>
+<!-- end footer -->
+
+</body>
+</html>

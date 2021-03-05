@@ -7,7 +7,7 @@ from pages.instructions.instructions import instructions
 from pages.termsofuse.termsofuse import termsofuse
 from pages.solution.solution import solution
 from pages.survey.survey import survey
-from pages.task.task import task
+from pages.demo.task import task
 from pages.video.video import video
 from pages.thanks.thanks import thanks
 

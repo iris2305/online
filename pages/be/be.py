@@ -94,3 +94,23 @@ def feedback():
     cursor.execute(sql)
     connection.commit()
     return 'ok'
+
+
+@be.route('/demo', methods=['POST'])
+def demo():
+    data = request.get_json()
+    query = '''
+        INSERT INTO public.demo
+        (studentid, ans1, ans2, ans3, ans4,ans5, ans6, ans7, ans8, ans9)
+        VALUES('{0}', {1}, {2}, {3}, {4},{5},{6},{7},{8},{9});
+    '''
+    sql = query.format(data["user_code"], data["question1"], data["question2"], data["question3"],
+                       data["question4"], data["question5"], data["question6"], data["question7"],
+                       data["question8"], data["question9"])
+    connection = psycopg2.connect(user=settings.DB['user'], password=settings.DB['password'],
+                                  host=settings.DB['host'], port=settings.DB['port'],
+                                  database=settings.DB['database'])
+    cursor = connection.cursor()
+    cursor.execute(sql)
+    connection.commit()
+    return 'ok'
