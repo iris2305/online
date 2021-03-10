@@ -1,9 +1,9 @@
 
 
 let videos = { //put task according to type video-> 1:task 1, 2: task 2, 3: task 3
-    'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4': 1,
+    'https://vimeo.com/521943675': 1,
     'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4': 2,
-    'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4': 3
+    'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4': 3,
     //27 videos of 3 tasks
 }
 debugger
