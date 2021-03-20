@@ -3,12 +3,9 @@
 /* instruction page */
 
 /* instruction section */
-
-.instruction .content{
-    padding-top: 30px;
-    padding-bottom: 30px;
+.instructions{
+    padding-top: inherit;
 }
-
 .instruction .content h1{
     font-size: 83px;
     font-weight: 700;
@@ -60,7 +57,7 @@
     cursor: pointer;
     margin: 12px;
 }
-section {
-    background-image: url(/static/images/greenbackground.png);
 
+section{
+    background-image: url(/static/images/greenbackground.png);
 }

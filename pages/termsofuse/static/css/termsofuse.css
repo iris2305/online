@@ -3,14 +3,11 @@
 /* termsofuse page */
 
 /* termsofuse section */
-
-.termsofuse .content{
-    padding-top: 30px;
-    padding-bottom: 30px;
+.termsofuse{
+    position: relative;
 }
-
 .termsofuse .content h1{
-    font-size: 83px;
+    font-size: 50px;
     font-weight: 700;
     position: relative;
     display: inline-block;
@@ -29,7 +26,7 @@
 }
 
 .termsofuse .content h2 {
-    font-size: 50px;
+    font-size: 30px;
     margin-top: 12px;
     font-weight: 700;
     color: #4a4c67;
@@ -38,15 +35,8 @@
 
 /* termsofuse-content section */
 
-
-.termsofuse-content  .content .text-box{
-    background-position: center;
-    padding-bottom: 60px;
-}
-
 .termsofuse-content .content p {
     font-size: 60px;
-    margin-top: 12px;
     font-weight: 700;
     color: #4a4c67;
 }
@@ -56,10 +46,12 @@
     background:rgb(197, 243, 235);
     border: 2px solid;
     color:black;
+    padding-top: 10px;
     padding-bottom: 10px;
     font-size: 20px;
     cursor: pointer;
     margin: 12px;
+    position: relative;
 }
 section {
     background-image: url(/static/images/greenbackground.png)
