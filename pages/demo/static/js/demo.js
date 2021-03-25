@@ -32,15 +32,15 @@ setInterval(function(){
 
 function buttonclick(){
     // take input of user into variable
-    question1 = document.forms.q1.question1.value;
-    question2 = document.forms.q2.question2.value;
-    question3 = document.forms.q3.question3.value;
-    question4 = document.forms.q4.question4.value;
-    question5 = document.forms.q5.question5.value;
-    question6 = document.forms.q6.question6.value;
-    question7 = document.forms.q7.question7.value;
-    question8 = document.forms.q8.question8.value;
-    question9 = document.forms.q9.question9.value;
+    var question1 = document.forms.q1.question1.value;
+    var question2 = document.forms.q2.question2.value;
+    var question3 = document.forms.q3.question3.value;
+    var question4 = document.forms.q4.question4.value;
+    var question5 = document.forms.q5.question5.value;
+    var question6 = document.forms.q6.question6.value;
+    var question7 = document.forms.q7.question7.value;
+    var question8 = document.forms.q8.question8.value;
+    var question9 = document.forms.q9.question9.value;
 
     function buttonclick() {
         if (question1 && question2 && question3 && question4 && question5 && question6 && question7 && question8 && question9) { //check that user answered all questions
