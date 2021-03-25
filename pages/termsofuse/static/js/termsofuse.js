@@ -29,6 +29,18 @@ setInterval(function(){
     xhttp.send();
 },2000);
 
+
+var checked = false;
+
+function onCheckboxClick(){
+    checked = !checked;
+    if(checked){
+        document.getElementById("terms_continue_btn").classList.remove("disabled");
+    }else{
+        document.getElementById("terms_continue_btn").classList.add("disabled");
+    }
+}
+
 function buttonclick() {
     window.location.href = "/solution/pre/0"
 
