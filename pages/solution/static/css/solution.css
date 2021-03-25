@@ -10,7 +10,7 @@
 }
 
 .solution .content h1{
-    font-size: 83px;
+    font-size: 50px;
     font-weight: 700;
     position: relative;
     display: inline-block;
@@ -29,7 +29,7 @@
 }
 
 .solution .content h2 {
-    font-size: 50px;
+    font-size: 30px;
     margin-top: 12px;
     font-weight: 700;
     color: #4a4c67;

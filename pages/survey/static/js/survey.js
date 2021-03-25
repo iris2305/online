@@ -37,6 +37,8 @@ function buttonclick(){
     question1 = document.forms.questiongroup1.question1.value;
     question2 = document.forms.questiongroup2.question2.value;
     question3 = document.forms.questiongroup3.question3.value;
+    question4 = document.forms.questiongroup4.question4.value;
+    question5 = document.forms.questiongroup5.question5.value;
     if(question1&&question2&&question3){ //check that user answered all questions
         var xhttp = new XMLHttpRequest();
 
@@ -58,7 +60,9 @@ function buttonclick(){
             video_index: index,
             question1: question1,
             question2: question2,
-            question3: question3
+            question3: question3,
+            question4: question4,
+            question5: question5
         }
 
         //take input into database
