@@ -1,8 +1,12 @@
-@import "/onlineInterviews/components/general.css";
 
 /* demo page */
 
 /* demo section */
+
+.disabled{
+    opacity: 0.5;
+    pointer-events: none;
+}
 
 .demo .content{
     padding-top: 30px;

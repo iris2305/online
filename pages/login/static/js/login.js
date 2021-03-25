@@ -53,7 +53,10 @@ if(!session){
 
 //check user code is valid
 
-function login(){
+function login(e){
+    if(e && e.preventDefault){
+        e.preventDefault();
+    }
     let value = document.getElementById("user_code_input").value.trim();
     if(value.length === 5){
         let data = {

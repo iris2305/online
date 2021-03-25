@@ -57,3 +57,10 @@ section {
     background-image: url(/static/images/greenbackground.png)
 
 }
+
+.disabled{
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
