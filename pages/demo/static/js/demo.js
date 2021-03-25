@@ -42,7 +42,6 @@ function buttonclick(){
     var question8 = document.forms.q8.question8.value;
     var question9 = document.forms.q9.question9.value;
 
-    function buttonclick() {
         if (question1 && question2 && question3 && question4 && question5 && question6 && question7 && question8 && question9) { //check that user answered all questions
             var xhttp = new XMLHttpRequest();
 
@@ -76,7 +75,7 @@ function buttonclick(){
 
             document.getElementById("button").style.pointerEvents = "none"; //display button
         } else {
-        }
+     
     }
 }
 
