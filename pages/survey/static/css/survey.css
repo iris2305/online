@@ -30,45 +30,14 @@
 
 .survey .content h2 {
     font-size: 50px;
+    margin-top: 12px;
     font-weight: 700;
     color: #4a4c67;
 }
+/* end survey section */
 
-.survey-form {
-    position: center;
-    top: 150%;
-    color: black;
-    left: 20%;
-}
+/* survey-content section */
 
-.text-box {
-    width: 100%;
-    overflow: hidden;
-    font-size: 20px;
-    padding: 8px 0;
-    margin: 8px 0;
-    border-bottom: 1px solid;
-}
-
-.text-box i {
-    width: 80px;
-    float: left;
-    text-align: center;
-    color: #4a4c67;
-}
-
-.text-box input {
-    border: black;
-    outline: black;
-    background: none;
-    color: black;
-    font-size: 20px;
-    width: 80%;
-    float: left;
-    margin: 0 10px;
-    cursor: pointer;
-
-}
 
 .survey-content  .content .text-box{
     background-position: center;
@@ -93,9 +62,6 @@
     margin: 12px;
 }
 section {
-    background-image: url(/static/images/greenbackground.png)
+    background-image: url(/onlineInterviews/images/greenbackground.png);
 
 }
-/* end survey section */
-
-/* survey-content section */
