@@ -32,7 +32,9 @@ let videos = { //put task according to type video-> 1:task 1, 2: task 2, 3: task
 }
 debugger
 
+
 let index = window.location.pathname.replace("/solution/pre/","");
+console.log("index2",index);
 index = parseInt(index);
 let user_data = JSON.parse(localStorage.getItem("user_data"));
 let video_url = user_data["videos"][index];

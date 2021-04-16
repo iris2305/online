@@ -102,7 +102,7 @@ def demo():
     query = '''
         INSERT INTO public.demo
         (studentid, ans1, ans2, ans3, ans4,ans5, ans6, ans7, ans8, ans9)
-        VALUES('{0}', {1}, {2}, {3}, {4},{5},{6},{7},{8},{9});
+        VALUES('{0}', {1}, {2}, '{3}', {4},{5},{6},{7},{8},{9});
     '''
     sql = query.format(data["user_code"], data["question1"], data["question2"], data["question3"],
                        data["question4"], data["question5"], data["question6"], data["question7"],
