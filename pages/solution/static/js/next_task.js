@@ -34,7 +34,7 @@ debugger
 
 
 let index = window.location.pathname.replace("/solution/pre/","");
-console.log("index",index);
+console.log("index2",index);
 index = parseInt(index);
 let user_data = JSON.parse(localStorage.getItem("user_data"));
 let video_url = user_data["videos"][index];
