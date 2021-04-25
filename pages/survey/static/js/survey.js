@@ -39,6 +39,8 @@ function buttonclick(){
     question3 = document.forms.questiongroup3.question3.value;
     question4 = document.forms.questiongroup4.question4.value;
     question5 = document.forms.questiongroup5.question5.value;
+    question6 = document.forms.questiongroup6.question6.value;
+
     if(question1&&question2&&question3){ //check that user answered all questions
         var xhttp = new XMLHttpRequest();
 
@@ -62,7 +64,8 @@ function buttonclick(){
             question2: question2,
             question3: question3,
             question4: question4,
-            question5: question5
+            question5: question5,
+            question6: question6
         }
 
         //take input into database
